@@ -2,12 +2,10 @@ package com.samples.camera.supportedmodes;
 
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.view.View;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
