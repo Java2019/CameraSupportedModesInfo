@@ -2,13 +2,17 @@ package com.samples.camera.supportedmodes;
 
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class CameraInfoActivity extends AppCompatActivity {
+public class CameraInfoActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,11 @@ public class CameraInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera_info);
 
         TextView text = (TextView)findViewById(R.id.text);
+        text.setMovementMethod(new ScrollingMovementMethod());
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         Camera camera = Camera.open();
 
         Camera.Parameters params = camera.getParameters();
